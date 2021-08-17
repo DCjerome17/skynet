@@ -1,0 +1,88 @@
+body {
+  background-position: center;
+  background-repeat: repeat-x;
+ }
+
+#titulo {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(84, 86, 243);
+}
+.btn {
+    -webkit-border-radius: 21;
+    -moz-border-radius: 21;
+    border-radius: 21px;
+    font-family: Courier New;
+    color: #fffcff;
+    font-size: 20px;
+    background: #db113a;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+#btnRegistroR {
+    -webkit-border-radius: 21;
+    -moz-border-radius: 21;
+    border-radius: 21px;
+    font-family: Courier New;
+    color: #fffcff;
+    font-size: 20px;
+    background: #d1002d;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+#registro, 
+#principal,
+#camara {
+    display: none;
+}
+
+.errorCampo{
+  border-color: #d1002d;
+  border-width: 3px;
+}
+
+.menu {
+  width: 0%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #db113a;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.botonCerrar{
+  position: absolute;
+  top: 0%;
+  right: 25%;
+  font-size: 36px;
+  margin-left: 50px;
+  color: blanchedalmond;
+  text-decoration: none;
+}
+.opciones{
+  text-decoration: none;
+  color: beige;
+  padding-left: 20px;
+}
+.opciones:visited{
+  color: antiquewhite;
+}
+
+.inputget {
+  display: none;
+}
+.container-photo{
+  background-color: rgb(226, 61, 11);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo{
+  height: 300px;
+  object-fit: cover;
+}

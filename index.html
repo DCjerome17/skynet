@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Skynet Móvil</title>
+        <link rel="stylesheet" type="text/css" href="css/app.css"/>
+        <script type="text/javascript" src="js/feather.min.js"></script>
+        
+          
+    </head>
+    <body>
+        <div id="ingreso">
+            <span id="titulo">Skynet Móvil</span> 
+            <br>
+            <br>
+            Correo:
+            <input type="email" id="correoi" />
+            <br><br>
+            Contraseña:
+            <input type="password" id="contrasenai" />
+            <br><br>
+            <button id="btnIngresar" class="btn">Ingresar</button>
+            <br>
+            <br>
+            <span id="btnRegistro">Registrarse</span>
+        </div>
+
+        <div id="registro">
+            Nombre de usuario
+            <input id="nombreR" />
+            <br>
+            Correo
+            <input type="email" id="correoR" />
+            <br>
+            Contraseña:
+            <input type="password" id="contrasenaR" />
+            <br>
+            Confirmar Contraseña
+            <input type="password" Id="confirmacionR">
+            <br>
+            Fecha de nacimiento
+            <input type="date" id="fecha">
+            <br>
+            <button id="btnRegistroR" class= "btn">Registra</button>
+            <br>
+            <br>
+        </div>
+        <div id= "principal">
+            <div id="menu"><span id="btnMenu" onclick="abrirBarra()"><i data-feather="align-justify"></i></span>
+            </div>Skynet móvil<br>
+            <div id="titulo">Bienvenido <span id="nombreP"></span> </div>    
+            <div id="redactar">
+                Para:<br>
+                <input type="text" id="correoM"/>
+                <br>
+                Mensaje:<br>
+                <textarea id ="mensajeM"></textarea>
+                <br>
+                <button id="enviarM" class="btn">Enviar</button>                
+  
+
+            </div>    
+            <div id = "Mensajes">
+            </div>
+            <div id="camara">
+                <div class="container-photo">
+                    <img id="photo" src="" class="photo">
+                </div>
+                <input accept="image/*" capture="camera" id="camera" class="inputget" type="file" />
+                <button id="btnOpen">Foto</button>
+                <button id="mapa">Mapa</button>
+                <input type="text" id="lugar"/>
+            </div>   
+        </div>
+
+        <div id="barraMenu" class= "menu">
+            <a href="javascript:void(0)" class="botonCerrar" onclick="cerrarBarra()"></a>
+            <a href="javascript:void(0)" class="opciones" onclick="mensajes()"><i data-feather="mail"></i>&nbsp;Mensajes</a><br>
+            <a href="javascript:void(0)" onclick="tomarFoto()" class="opciones"><i data-feather="camera"></i>&nbsp;Fotos</a><br>
+            <a href="javascript:void(0)" onclick="cerrarSesion()" class="opciones"><i data-feather="log-out"></i>Cerrar Sesion</a><br>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>
