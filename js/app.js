@@ -102,7 +102,7 @@ btnRegistroR.addEventListener("click", function() {
     datos.append("fechaR", txtFecha.value);
 
 
-    fetch("http://tpadfcgskynet.freevar.com/registro.php", {
+    fetch("http://skynetv2.6te.net/registro.php", {
         method: 'POST',
         body: datos
     })
@@ -145,7 +145,7 @@ btnIngresar.addEventListener("click", function() {
     datosi.append("correoi", txtCorreoi.value);
     datosi.append("contrasenai", txtContrasenai.value);
 
-    fetch("http://tpadfcgskynet.freevar.com/ingreso.php", {
+    fetch("http://skynetv2.6te.net/ingreso.php", {
         method: 'POST',
         body: datosi
     })
@@ -202,6 +202,14 @@ camera.addEventListener("change", function(e){
     //link.click();
 });
 
+if('serviceWorker' in navigator){
+    window.addEventListener('load', () =>{
+        navigator.serviceWorker.register('../sw.js').then ( () => {
+            console.log('Service Worker Registered')
+        });
+    });
+}
+
 enviarM.addEventListener("click", function(){
     if(txtPara.value == ""){
         alert("Ingresa a quien le enviamos el mensaje");
@@ -226,7 +234,7 @@ enviarM.addEventListener("click", function(){
         datosm.append("correoM", txtPara.value);
         datosm.append("mensajeM", txtMensaje.value);
     
-        fetch("http://tpadfcgskynet.freevar.com/guardarMensaje.php", {
+        fetch("http://skynetv2.6te.net/guardarMensaje.php", {
             method: 'POST',
             body: datosm
         })
@@ -270,7 +278,7 @@ function cerrarSesion() {
 function leerM(){
     let datosLM = new FormData();
     datosLM.append("correoUsuario", correo);
-    fetch("http://tpadfcgskynet.freevar.com/leerMensaje.php", {
+    fetch("http://skynetv2.6te.net/leerMensaje.php", {
         method: 'POST',
         body: datosLM
     })
